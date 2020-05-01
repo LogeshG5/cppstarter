@@ -19,9 +19,9 @@
         },
         {
             // This gets run on Ctrl + Shift + B
-            "label": "make quick",
+            "label": "make all",
             "args": [
-                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target quick -- -j 4 && echo; src/quick"
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; apps/app"
             ],
             "problemMatcher": [],
             "group": {
