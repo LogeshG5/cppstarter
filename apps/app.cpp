@@ -1,7 +1,5 @@
 #include <lib.hpp>
 
-#include <fmt/format.h>
-
 #include <iostream>
 #include <tuple>
 #include <vector>
@@ -12,7 +10,7 @@ int main()
 
    auto [mean, moment] = accumulate_vector(input);
 
-   fmt::print("Mean: {}, Moment: {}\n", mean, moment);
+   std::cout << "Mean: " << mean << ", Moment: " << moment << "\n";
 
    return 0;
 }

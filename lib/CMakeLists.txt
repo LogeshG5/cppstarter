@@ -13,7 +13,7 @@ add_library(app_library lib.cpp ${HEADER_LIST})
 target_include_directories(app_library PUBLIC .)
 
 # This depends on (header only) boost
-target_link_libraries(app_library PRIVATE Boost::boost)
+# target_link_libraries(app_library PRIVATE Boost::boost)
 
 # All users of this library will need at least C++11
 target_compile_features(app_library PUBLIC cxx_std_11)
