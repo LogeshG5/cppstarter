@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "sh",
+    "args": [
+        "-c"
+    ],
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "tasks": [
+        {
+            "label": "cmake",
+            "args": [
+                "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug .."
+            ],
+            "problemMatcher": []
+        },
+        {
+            // This gets run on Ctrl + Shift + B
+            "label": "make quick",
+            "args": [
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target quick -- -j 4 && echo; src/quick"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            // This gets run on Ctrl + Shift + T
+            "label": "make test",
+            "args": [
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target test -- -j 4 && echo;"
+            ],
+            "problemMatcher": [],
+        }
+    ]
+}
