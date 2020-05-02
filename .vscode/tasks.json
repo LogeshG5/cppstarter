@@ -23,7 +23,9 @@
             "args": [
                 "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; apps/app"
             ],
-            "problemMatcher": [],
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
