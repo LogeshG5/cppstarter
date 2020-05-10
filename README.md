@@ -42,3 +42,7 @@ cmake --open xbuild
 ```
 
 The CMakeLists show off several useful design patters for CMake.
+
+#### Credits
+This work is a modified form of what is found in
+https://gitlab.com/CLIUtils/modern-cmake/

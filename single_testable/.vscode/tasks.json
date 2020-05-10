@@ -21,7 +21,7 @@
             // This gets run on Ctrl + Shift + B
             "label": "make all",
             "args": [
-                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; apps/app"
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; build/ProjectSingleTestable"
             ],
             "problemMatcher": [
                 "$gcc"
@@ -35,7 +35,7 @@
             // This gets run on Ctrl + Shift + T
             "label": "make test",
             "args": [
-                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target test -- -j 4 && echo;"
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target TestProject -- -j 4 && echo;"
             ],
             "problemMatcher": [
                 "$gcc"

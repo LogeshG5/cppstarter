@@ -21,7 +21,7 @@
             // This gets run on Ctrl + Shift + B
             "label": "make all",
             "args": [
-                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; apps/app"
+                "/usr/bin/cmake --build ${workspaceRoot}/build --config RelWithDebInfo --target all -- -j 4 && echo; build/apps/app"
             ],
             "problemMatcher": [
                 "$gcc"
